@@ -1,0 +1,28 @@
+
+
+1.finnd the occurences of charterer into the String 
+2.find the no of repeation required 
+3.
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+static long repeatedString(String s, long n) {
+        long count =0;
+        for(int i=0;i<s.length();i++){///1.no of aocur in the String s
+            if(s.charAt(i)=='a'){
+                count++;
+            }
+        }
+        long strRepeated=n/s.length();///no s occur in the full string and multiply it
+        count=count*strRepeated;
+        for(int i=0;i<n%s.length();i++){///which not fully multipy then 10/3=1 is this aor not checking 
+        //if yes increment the count +1
+            if(s.charAt(i)=='a'){
+                count++;
+            }
+        }
+
+      return count;
+    }
